@@ -14,5 +14,8 @@
 /**
  * Set locale for the based on the browser accept language
  */
-$locale = \Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+$locale = 'en_US';
+if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    $locale = \Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+}
 $this->translator->setLocale($locale);
