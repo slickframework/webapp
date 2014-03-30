@@ -1,0 +1,14 @@
+#Remove Cookie from all static content (except HTML as javascript could use it)
+<FilesMatch "\.(html|htm|js|css|gif|jpe?g|png|pdf|txt|zip|7z|gz|jar|war|tar|ear|java|pac)$">
+    <IfModule header_module>
+        Header unset Cookie
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !=/favicon.ico
+    RewriteRule ^([a-zA-Z0-9\/\-_]+)\.?([a-zA-Z]+)?$ index.php?url=$1&extension=$2 [QSA,L]
+</IfModule>

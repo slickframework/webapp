@@ -1,0 +1,21 @@
+{
+    "name": "slick/webapp",
+    "description": "Slick web application template",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filipe Silva",
+            "email": "silvam.filipe@gmail.com"
+        }
+    ],
+
+    "require": {
+        "slick/slick": "dev-release/v1.0.0-beta"
+    },
+    "autoload": {
+        "psr-0": {
+            "": ""
+        }
+    }
+}
