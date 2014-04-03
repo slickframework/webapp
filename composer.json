@@ -11,7 +11,7 @@
     ],
 
     "require": {
-        "slick/slick": "dev-release/v1.0.0-beta"
+        "slick/slick": "dev-release/v1.0.0-RC"
     },
     "autoload": {
         "psr-0": {
