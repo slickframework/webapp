@@ -13,9 +13,6 @@
 use Slick\Configuration\Configuration,
     Slick\Mvc\Application;
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
 // Set the base directory for this application
 chdir(dirname(__DIR__));
 
