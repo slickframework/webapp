@@ -1,7 +1,7 @@
 {
     "name": "slick/webapp",
-    "description": "Slick web application template using bootstrap-sass and compass",
-    "minimum-stability": "dev",
+    "description": "Slick web application template",
+    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,8 @@
         "slick/slick": "dev-release/v1.0.0-RC"
     },
     "require-dev": {
-        "codeception/codeception": "1.8.*@dev"
+        "codeception/codeception": "1.8.*@dev",
+        "phpmd/phpmd" : "1.4.*"
     },
     "autoload": {
         "psr-0": {
