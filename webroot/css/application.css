@@ -1,0 +1,87 @@
+/* line 42, icons/*.png */
+.icons-sprite, .icons-slick-footer, .made-with-slick {
+  background: url('/webapp/images/icons-s08d707910d.png') no-repeat;
+}
+
+/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-slick-footer {
+  background-position: 0 0;
+}
+
+/* header */
+/* line 5, ../sass/application.scss */
+header .navbar h1,
+h1.page-header {
+  margin-top: 0px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/* line 12, ../sass/application.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 16, ../sass/application.scss */
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 70px;
+  background: url('/webapp/images/body-bg.png?1396661678') repeat top left;
+}
+
+/* line 22, ../sass/application.scss */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #e0e0e0;
+}
+
+/* line 30, ../sass/application.scss */
+.made-with-slick {
+  background-position: 0 0;
+  height: 24px;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+/* Other slick styles
+-------------------------------------------------- */
+/* line 39, ../sass/application.scss */
+code {
+  font-size: 80%;
+}
+
+/* line 42, ../sass/application.scss */
+.entity-index .panel-footer .pagination {
+  margin: 5px 0px;
+}
+
+/* line 45, ../sass/application.scss */
+.table-actions {
+  text-align: right;
+}
+
+/* line 48, ../sass/application.scss */
+.data-table-actions {
+  text-align: center;
+}
+
+/* line 51, ../sass/application.scss */
+.entity-index .table {
+  margin-bottom: 0px;
+}
+
+/* line 54, ../sass/application.scss */
+.required-indicator {
+  color: red;
+}
+
+/* line 57, ../sass/application.scss */
+.quick-access {
+  margin-bottom: 20px;
+}

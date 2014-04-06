@@ -1,0 +1,59 @@
+@import "base";
+
+/* header */
+header .navbar h1,
+h1.page-header {
+	margin-top: 0px;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 70px;
+  background: image-url("body-bg.png") repeat top left; 
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #e0e0e0;
+}
+.made-with-slick {
+	@include icons-sprite(slick-footer);
+	height: 24px;
+	padding-left: 30px;
+	margin-top: 20px;
+}
+
+/* Other slick styles
+-------------------------------------------------- */
+code {
+    font-size: 80%;
+}
+.entity-index .panel-footer .pagination {
+    margin: 5px 0px;
+}
+.table-actions {
+    text-align: right;
+}
+.data-table-actions {
+    text-align: center;
+}
+.entity-index .table {
+    margin-bottom: 0px;
+}
+.required-indicator{
+    color: red;
+}
+.quick-access {
+    margin-bottom: 20px;
+}
