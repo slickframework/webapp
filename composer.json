@@ -11,7 +11,7 @@
     ],
 
     "require": {
-        "slick/slick": "dev-release/v1.0.0-RC"
+        "slick/slick": "1.0.*@dev"
     },
     "require-dev": {
         "codeception/codeception": "1.8.*@dev",
