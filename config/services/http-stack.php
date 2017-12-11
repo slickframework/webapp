@@ -4,7 +4,7 @@
  * Application HTTP middleware stack services
  */
 
-namespace Features\App\Config\Services;
+namespace config\Services;
 
 use Aura\Router\RouterContainer;
 use Slick\Di\Container;

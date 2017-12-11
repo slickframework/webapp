@@ -4,7 +4,7 @@
  * Template engine service
  */
 
-namespace Features\App\Config\Services;
+namespace config\Services;
 
 use Slick\Di\Container;
 use Slick\Template\Template;
