@@ -1,4 +1,4 @@
-composer.lock
-vendor
 .idea
-webroot/.sass-cache/*
+composer.phar
+/vendor
+/config/settings-local.php
