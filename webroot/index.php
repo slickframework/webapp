@@ -1,31 +1,33 @@
 <?php
 
 /**
- * Slick Framework web application startup application
- *
- * @package    SlickCms
- * @author     Filipe Silva <silvam.filipe@gmail.com>
- * @copyright  2014 Filipe Silva
- * @license    http://www.opensource.org/licenses/mit-license.php MIT License
- * @since      Version 1.0.0
+ * Application startup script
  */
 
-use Slick\Configuration\Configuration,
-    Slick\Mvc\Application;
+namespace Test\App;
 
-// Set the base directory for this application
-chdir(dirname(__DIR__));
+use Slick\Di\ContainerBuilder;
+use Slick\Http\Message\Response;
+use Slick\Http\Message\Server\Request;
+use Slick\Http\Server\MiddlewareStack;
 
-/** @var Composer\Autoload\ClassLoader $autoload */
-$autoload = require_once 'vendor/autoload.php';
+require dirname(__DIR__).'/vendor/autoload.php';
 
-// Create application
-Configuration::addPath(getcwd() . '/Configuration');
-$app = new Application();
+/** Application root directory */
+define('APP_ROOT', dirname(__DIR__));
+define('WEB_ROOT', dirname(__DIR__).'/webroot');
 
-// Application bootstrap
-$app->bootstrap();
-$app->run();
+$container = (new ContainerBuilder(APP_ROOT.'/config/services'))->getContainer();
 
+/** @var Response $response */
+$response = $container->get(MiddlewareStack::class)
+    ->process(new Request());
 
-$app->getResponse()->send();
+// Send response headers
+foreach ($response->getHeaders() as $name => $value) {
+    $line = implode(', ', $value);
+    header("{$name}: $line");
+}
+
+// Send response body
+echo $response->getBody();

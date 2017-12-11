@@ -1,25 +1,37 @@
 {
-    "name": "slick/webapp",
-    "description": "Slick web application template",
-    "minimum-stability": "stable",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Filipe Silva",
-            "email": "silvam.filipe@gmail.com"
-        }
-    ],
-
-    "require": {
-        "slick/slick": "1.0.*@dev"
-    },
-    "require-dev": {
-        "codeception/codeception": "1.8.*@dev",
-        "phpmd/phpmd" : "1.4.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "": ""
-        }
+  "name": "slick/webapp",
+  "description": "Slick web application template",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Filipe Silva",
+      "email": "silvam.filipe@gmail.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "src"
+    }
+  },
+  "require-dev": {
+    "behat/mink": "^1.7@dev",
+    "behat/mink-extension": "^2.1@dev",
+    "behat/mink-goutte-driver": "^1.2@dev",
+    "phpspec/phpspec": "^4.2@dev",
+    "squizlabs/php_codesniffer": "^3.0@dev"
+  },
+  "scripts": {
+    "test": "phpspec run -fdot",
+    "acceptance-test": "behat --format progress",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "doctrine/orm": "^2.6@dev",
+    "slick/webstack": "^1.1@dev"
+  }
 }
