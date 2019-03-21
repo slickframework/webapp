@@ -3,6 +3,7 @@
   "description": "Slick web application template",
   "minimum-stability": "dev",
   "license": "MIT",
+  "version": "v2.0.0",
   "authors": [
     {
       "name": "Filipe Silva",
@@ -12,6 +13,12 @@
   "autoload": {
     "psr-4": {
       "": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev",
+      "dev-develop": "2.1-dev"
     }
   },
   "require": {
