@@ -3,6 +3,7 @@
   "description": "Slick web application template",
   "minimum-stability": "dev",
   "license": "MIT",
+  "version": "v2.0.0",
   "authors": [
     {
       "name": "Filipe Silva",
@@ -14,24 +15,33 @@
       "": "src"
     }
   },
-  "require-dev": {
-    "behat/mink": "^1.7@dev",
-    "behat/mink-extension": "^2.1@dev",
-    "behat/mink-goutte-driver": "^1.2@dev",
-    "phpspec/phpspec": "^4.2@dev",
-    "squizlabs/php_codesniffer": "^3.0@dev"
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev",
+      "dev-develop": "2.1-dev"
+    }
+  },
+  "require": {
+    "doctrine/orm": "^2.7",
+    "slick/webstack": "^1.2"
   },
   "scripts": {
     "test": "phpspec run -fdot",
-    "acceptance-test": "behat --format progress",
     "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
     "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
   },
   "config": {
-    "sort-packages": true
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true
   },
-  "require": {
-    "doctrine/orm": "^2.6@dev",
-    "slick/webstack": "^1.1@dev"
+  "require-dev": {
+    "behat/mink": "^1.7@dev",
+    "behat/mink-extension": "^2.1@dev",
+    "behat/mink-goutte-driver": "^1.2@dev",
+    "phpspec/phpspec": "^5.1@dev",
+    "squizlabs/php_codesniffer": "^3.0@dev"
   }
 }

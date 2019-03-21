@@ -9,6 +9,7 @@
 
 namespace config;
 
+use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\ORMException;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Infrastructure\Persistence\Doctrine\EntityManagerFactory;
@@ -23,6 +24,8 @@ try {
     $entityCollection = (new EntityManagerFactory($settings, null, true))->entityManagersCollection();
     return ConsoleRunner::createHelperSet($entityCollection->get('default'));
 } catch (ORMException $caught) {
+    print "Error: {$caught->getMessage()}";
+} catch (DBALException $caught) {
     print "Error: {$caught->getMessage()}";
 }
 
