@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5efcd65c2c3cfda106fbd588b7714f67",
+    "content-hash": "97a18c38f0fce13ec9299dbac78d61fa",
     "packages": [
         {
             "name": "aura/router",
@@ -1928,12 +1928,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "6cd3a72f265080d48b7f5dcadbae9e763e78d304"
+                "reference": "deab8a7745c1bcfb1ae4b846fbe6a39a36afcb4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/6cd3a72f265080d48b7f5dcadbae9e763e78d304",
-                "reference": "6cd3a72f265080d48b7f5dcadbae9e763e78d304",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/deab8a7745c1bcfb1ae4b846fbe6a39a36afcb4f",
+                "reference": "deab8a7745c1bcfb1ae4b846fbe6a39a36afcb4f",
                 "shasum": ""
             },
             "require": {
@@ -1986,7 +1986,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-03-20T18:20:34+00:00"
+            "time": "2019-03-21T14:50:42+00:00"
         }
     ],
     "packages-dev": [
