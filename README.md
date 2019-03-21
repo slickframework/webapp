@@ -1,5 +1,4 @@
 # Slick web application template
----
 
 This is a simple Slick framework web application template.
 
@@ -40,6 +39,7 @@ If you discover any security related issues, please email slick.framework@gmail.
 
 ## Credits
 
+- [Slick framework](https://github.com/slickframework)
 - [All Contributors][link-contributors]
 
 ## License
