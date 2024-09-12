@@ -2,3 +2,10 @@
 composer.phar
 /vendor
 /config/settings-local.php
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.scannerwork
+.phpunit.result.cache
