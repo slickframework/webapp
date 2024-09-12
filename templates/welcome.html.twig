@@ -1,0 +1,104 @@
+{% extends "base.html.twig" %}
+
+{% block html_title %}Slick welcome page{% endblock %}
+{% block html_head_stylesheets %}
+    {{ parent() }}
+    <!--  Custom styles -->
+    <style>
+        .welcome-hero {
+            background: url('/assets/img/hi-tech-concepts-on-blue-background-hero-header.jpg') no-repeat center center !important;
+            background-size: cover;
+        }
+        .hero-darken {
+            background-color: rgba(42, 42, 38, 0.5);
+        }
+    </style>
+{% endblock %}
+
+
+{% block page_hero %}
+    <section class="hero is-medium is-bold is-primary welcome-hero">
+        <div class="hero-body hero-darken">
+            <div class="container">
+                <div class="is-flex is-align-items-center">
+                    <div class="mr-5">
+                        <svg style="max-height: 46px" viewBox="0 0 1600 1600" width="1280" height="1280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <path transform="translate(1431,8)" d="m0 0 16 8 6 5 9 11 9 12 9 15 4 8 2 7v38l-3 45-4 83 2 12 4 20 2 15v23l-8 10-7 6-9 11-8 10-9 15-3 11-2 19-1 12v34l4 15 4 5 14 11 14 12 8 9 2 9 1 19v45l-2 14-5 16-8 18-8 16-13 24-7 12-7 16-10 15-8 10-11 13-7 8-7 7-3 4h-2l-2 4-5 5-9 10-11 14-24 34-12 16-10 14-4 8-16 63-4 25-1 108v88l-1 15v14l3 14 8 16 10 15 10 13 11 12 3 3v2l4 2 6 7 2 1v2l4 2 15 15 8 7 8 8v2h2l9 12 8 13 4 10v10l-4 13-6 9-8 7-6 3h-7l-3-2h-16l-12 4-7 1-14-3-15-9-16-16-11-14-14-17-11-13-9-10-11-12-7-7-7-8-8-8-9-11-2-4-1-9-1-28-3-38-2-6v-5l1-1v-10l-4-16-10-15-4-5-17-10-16-11-13-12-14-7-10-3-11-1-9 2-16 8-10 8-8 9-7 11-7 10-7 11-13 18-12 17-8 11-12 15-7 10-7 15-9 25-3 16 2 9 8 10 7 7 16 8 14 5 24 8 10 6 10 12 7 10 12 11 7 8 5 8 3 8 1 8-2 2-7 1-26 1h-490l-13-4-8-6-11-7-12-8-13-4-7-1h-27l-23 2-19 4-34 12-37 13-43 12-29 9-36 14-14 6-7 5-5 6-8 6-23 13-12 8-12 9-9 10-3 6-1 5-2 43 3 13 6 11 10 12 7 9 10 13 9 13 5 9-1 3-34-3-22-3-12-4-10-8-25-25-11-14-10-17-9-24-3-13v-11l4-14 8-18 10-13 16-16 10-8 12-9 11-7 17-10 19-10 17-10 5-4 9-12 4-10 8-9 16-8 19-8 20-9 16-8 28-16 10-7 11-8 14-12 14-11 13-10 21-16 16-12 12-12 6-8 10-16 10-17 8-14 13-31 8-23 6-19 5-21 3-20 3-44 4-31 6-34 5-23 7-17 12-26 8-16 7-15 14-26 8-12 10-14 16-24 9-13 10-14 13-16 3-4h2l2-4 10-10 8-7 11-11 9-11 10-11 7-8 14-14 8-7 14-13 8-7 14-12 15-14 10-9 19-13 25-14 19-9 19-7 25-5 29-5 28-7 40-9 24-7 41-10 6-3h11l23-3 21-7 13-7 10-8 10-9 8-8 4-7 3-16 3-29 1-18v-18l-3-21-6-24-6-17-12-22-10-16-10-17-6-9-6-15-3-32-2-41 4-14 11-22 12-16 9-11 4-3h7l10 4 10 9 6 7 6 8 14 10 22 14 14 9 6 2h17l43-3 34-3 11-4 9-6 3-3h2l2-4 7-7h2l1-3 7-6 2-3h2l1-3 8-7 9-10h2l1-3 8-7 13-13 11-9 8-5z"/>
+                        </svg>
+                    </div>
+
+                    <div class="title"><span class="is-size-3">Welcome to </span><span class="is-size-2">Slick {{ slickVersion }}</span></div>
+                </div>
+                <div class="ml-6 pl-5 mt-5">
+                    <p class="subtitle is-size-4">Streamlining PHP Application Development with PSR-15 Handlers and Modern Development Practices.</p>
+                    <a href="https://www.slick-framework.com/getting_started.html" class="button is-info is-medium" target="_blank">Get Started</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="message is-info mt-6">
+            <div class="message-body is-flex is-gap-2">
+                <div class="icon is-large">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-square fa-stack-2x"></i>
+                        <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="is-size-5">
+                    A great way to get hands-on experience with Slick is by following the <em>Building "Pantry Pal" tutorial</em>. In this tutorial, you'll create a dynamic recipe finder application that allows users to search for recipes based on the ingredients they already have at home.
+                    <br />&nbsp;
+                    <br />&nbsp;
+                    <a href="https://www.slick-framework.com/howtos/2024/08/25/building-pantry-pal-a-recipe-search-application-with-slick.html" class="button is-primary" target="_blank">Follow the "Pantry Pal" tutorial</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="block mt-6 pt-6">
+            <div class="columns is-centered is-gap-3">
+                <div class="column is-size-6 has-text-centered">
+                    <div class="icon callout-icon">
+                        <i class="fas fa-cog fa-4x"></i>
+                    </div>
+
+                    <p class="title is-5">Easy to integrate</p>
+                    <div class="content">
+                        <p>It is low on dependencies an can be easily installed with composer on other projects.</p>
+                    </div>
+                </div>
+
+                <div class="column is-size-6 has-text-centered">
+                    <div class="icon callout-icon">
+                        <i class="fas fa-wrench fa-4x"></i>
+                    </div>
+
+                    <p class="title is-5">Extensible</p>
+
+                    <div class="content">
+                        <p>All the ideas behind the packages are represented in interfaces. You can implement what's missing.</p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="column is-size-6 has-text-centered">
+                    <div class="icon callout-icon">
+                        <i class="fas fa-cubes fa-4x"></i>
+                    </div>
+
+                    <p class="title is-5">Modular</p>
+
+                    <div class="content">
+                        <p>Created with packages that can be used separately. If you need a dependency container just use Slick\Di</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
