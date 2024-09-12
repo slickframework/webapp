@@ -4,30 +4,39 @@
  * Application startup script
  */
 
-namespace Test\App;
+namespace App\StartScript;
 
-use Slick\Di\ContainerBuilder;
-use Slick\Http\Message\Response;
+use Slick\ErrorHandler\Runner;
+use Slick\ErrorHandler\Util\SystemFacade;
 use Slick\Http\Message\Server\Request;
-use Slick\Http\Server\MiddlewareStack;
+use Slick\Template\UserInterface\PrettyErrorHandler;
+use Slick\WebStack\Infrastructure\FrontController\WebApplication;
 
-require dirname(__DIR__).'/vendor/autoload.php';
+require_once dirname(__DIR__).'/vendor/autoload.php';
 
-/** Application root directory */
-define('APP_ROOT', dirname(__DIR__));
-define('WEB_ROOT', dirname(__DIR__).'/webroot');
+// ------------------------------------------------------
+//  Exception/Error handling
+// ------------------------------------------------------
+$runner = new Runner(new SystemFacade(), dirname(__DIR__).'/src');
+$runner
+    ->pushHandler(PrettyErrorHandler::create())
+    ->register();
 
-$container = (new ContainerBuilder(APP_ROOT.'/config/services'))->getContainer();
+// ------------------------------------------------------
+//  Initialize application
+// ------------------------------------------------------
+$request = new Request();
+$application = new WebApplication($request, dirname(__DIR__));
 
-/** @var Response $response */
-$response = $container->get(MiddlewareStack::class)
-    ->process(new Request());
-
-// Send response headers
-foreach ($response->getHeaders() as $name => $value) {
-    $line = implode(', ', $value);
-    header("{$name}: $line");
+// ------------------------------------------------------
+//  Load any bootstrap actions
+// ------------------------------------------------------
+$bootstrapFile = APP_ROOT . '/config/bootstrap.php';
+if (is_file($bootstrapFile)) {
+    include_once $bootstrapFile;
 }
 
-// Send response body
-echo $response->getBody();
+// ------------------------------------------------------
+//  Run application and output the response.
+// ------------------------------------------------------
+$application->output($application->run());

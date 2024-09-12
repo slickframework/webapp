@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v2.1.0] - 2024-09-11
+### Added
+- Support for new ``slick/webstack`` v2.0.X
+- PHPUnit as test framework
+### Changed
+- minimum supported PHP version is >= 8.3.x
+### Removed
+- Templating content
+- PHPSpec test framework
+- Behar suport
+- Project-specific files such as CONDUCT and CONTRIBUTING are removed. Since this is a
+  template, the final project may have different guidelines or rules regarding these matters.
+
 ## [v2.0.1] - 2019-03-21
 ### Fixed
 - Composer lock update warnings
@@ -29,6 +42,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/slickframework/webapp/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/slickframework/webapp/compare/v2.1.0...HEAD
+[v2.1.0]: https://github.com/slickframework/webapp/compare/v2.0.1...v2.1.0
+[v2.0.1]: https://github.com/slickframework/webapp/compare/v2.0.0...v2.0.1
 [v2.0.0]: https://github.com/slickframework/webapp/compare/v1.0.0...v2.0.0
 [v1.0.0]: https://github.com/slickframework/webapp/compare/201cd5...v1.0.0

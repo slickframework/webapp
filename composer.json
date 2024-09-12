@@ -1,34 +1,26 @@
 {
   "name": "slick/webapp",
-  "description": "Slick web application template",
+  "description": "Basic template for a web application built with the Slick framework.",
   "minimum-stability": "dev",
   "license": "MIT",
-  "version": "v2.0.1",
-  "authors": [
-    {
-      "name": "Filipe Silva",
-      "email": "silvam.filipe@gmail.com"
-    }
-  ],
+  "version": "v2.1.0",
   "autoload": {
     "psr-4": {
-      "": "src"
+      "App\\": "src/"
     }
   },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.0-dev",
-      "dev-develop": "2.1-dev"
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\App\\": "tests/"
     }
   },
   "require": {
-    "doctrine/orm": "^2.7",
-    "slick/webstack": "^1.2"
+    "php": ">=8.3",
+    "slick/template": "^3.0@dev",
+    "slick/webstack": "^2.0@dev"
   },
   "scripts": {
-    "test": "phpspec run -fdot",
-    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
-    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
+    "test": "phpunit"
   },
   "config": {
     "preferred-install": {
@@ -38,10 +30,6 @@
     "optimize-autoloader": true
   },
   "require-dev": {
-    "behat/mink": "^1.7@dev",
-    "behat/mink-extension": "^2.1@dev",
-    "behat/mink-goutte-driver": "^1.2@dev",
-    "phpspec/phpspec": "^5.1@dev",
-    "squizlabs/php_codesniffer": "^3.0@dev"
+    "phpunit/phpunit": "^11.4@dev"
   }
 }
