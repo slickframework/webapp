@@ -3,7 +3,7 @@
   "description": "Basic template for a web application built with the Slick framework.",
   "minimum-stability": "dev",
   "license": "MIT",
-  "version": "v2.1.0",
+  "version": "v2.1.1",
   "autoload": {
     "psr-4": {
       "App\\": "src/"
