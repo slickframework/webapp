@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4065881aaf4e3381983734078750250",
+    "content-hash": "dfadee73774c579574f731265b9cd7e7",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -1623,12 +1623,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slickframework/web-stack.git",
-                "reference": "2b4e523c81fd238a0cd601da882a52ca67cd0815"
+                "reference": "95b7b16af0d330974aec9826198a6424a3b491b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slickframework/web-stack/zipball/2b4e523c81fd238a0cd601da882a52ca67cd0815",
-                "reference": "2b4e523c81fd238a0cd601da882a52ca67cd0815",
+                "url": "https://api.github.com/repos/slickframework/web-stack/zipball/95b7b16af0d330974aec9826198a6424a3b491b1",
+                "reference": "95b7b16af0d330974aec9826198a6424a3b491b1",
                 "shasum": ""
             },
             "require": {
@@ -1694,7 +1694,7 @@
                 "issues": "https://github.com/slickframework/web-stack/issues",
                 "source": "https://github.com/slickframework/web-stack/tree/develop"
             },
-            "time": "2024-09-21T23:16:29+00:00"
+            "time": "2024-09-22T23:57:58+00:00"
         },
         {
             "name": "symfony/config",
