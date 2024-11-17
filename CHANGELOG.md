@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v2.1.7] - 2024-11-17
+### Changed
+- updates `slick/webstak` version to 2.0.7
 ## [v2.1.5] - 2024-11-04
 ## [v2.1.3] - 2024-09-23
 ### Changed
@@ -48,7 +51,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/slickframework/webapp/compare/v2.1.5...HEAD
+[Unreleased]: https://github.com/slickframework/webapp/compare/v2.1.7...HEAD
+[v2.1.5]: https://github.com/slickframework/webapp/compare/v2.1.5...v2.1.7
 [v2.1.5]: https://github.com/slickframework/webapp/compare/v2.1.3...v2.1.5
 [v2.1.3]: https://github.com/slickframework/webapp/compare/v2.0.1...v2.1.3
 [v2.1.0]: https://github.com/slickframework/webapp/compare/v2.0.1...v2.1.0
